@@ -33,10 +33,10 @@ public class CalculadoraDeSalariosTest {
     salário seja maior ou igual que 5.000,00, ou apenas 20% caso o salário seja menor que isso.
     */
     
-    @Test
+   @Test
     public void testDesenvolvedor() {
         CalculadoraDeSalarios calcSalario = new CalculadoraDeSalarios();  
-        Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 2000.00, "Desenvolvedor");
+        Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 2000.00, "DESENVOLVEDOR");
         double salCalculado = calcSalario.calculaSalario(func); 
         assertEquals(1800.00, salCalculado, 1);
     }
@@ -49,20 +49,21 @@ public class CalculadoraDeSalariosTest {
         assertEquals(2250.00, salCalculado, 1);
     }
     
+ 
     @Test
     public void testTestador() {
         CalculadoraDeSalarios calcSalario = new CalculadoraDeSalarios();  
-        Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 1500.00, "Testador");
-        double salCalculado = calcSalario.calculaSalario(func); 
+        Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 1500.00, "TESTADOR");             
+       double salCalculado = calcSalario.calculaSalario(func);
         assertEquals(1275.00, salCalculado, 1);
     }
     
     @Test
     public void testGerente() {
         CalculadoraDeSalarios calcSalario = new CalculadoraDeSalarios();  
-        Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 10500.00, "Gerente");
+        Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 10500.00, "GERENTE");
         double salCalculado = calcSalario.calculaSalario(func); 
-        assertEquals(7350.00, salCalculado);
+        assertEquals(7350.00, salCalculado, 1);
     }
         
 }

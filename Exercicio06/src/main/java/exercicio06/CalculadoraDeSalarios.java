@@ -22,16 +22,9 @@ class CalculadoraDeSalarios {
             else
                 salarioCalc = func.getSalarioBase() - (func.getSalarioBase() * 0.1); 
         }
-        if(func.getCargo() == "DBA")
+        if(func.getCargo() == "DBA" || func.getCargo() == "TESTADOR")
         {
             if(func.getSalarioBase() >= 2000.00)               
-                salarioCalc = func.getSalarioBase() - (func.getSalarioBase() * 0.25);  
-            else
-                salarioCalc = func.getSalarioBase() - (func.getSalarioBase() * 0.15); 
-        }
-        if(func.getCargo() == "TESTADOR")
-        {
-             if(func.getSalarioBase() >= 2000.00)               
                 salarioCalc = func.getSalarioBase() - (func.getSalarioBase() * 0.25);  
             else
                 salarioCalc = func.getSalarioBase() - (func.getSalarioBase() * 0.15); 

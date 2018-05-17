@@ -36,34 +36,30 @@ public class CalculadoraDeSalariosTest {
    @Test
     public void testDesenvolvedor() {
         CalculadoraDeSalarios calcSalario = new CalculadoraDeSalarios();  
-        Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 2000.00, "DESENVOLVEDOR");
-        double salCalculado = calcSalario.calculaSalario(func); 
-        assertEquals(1800.00, salCalculado, 1);
+        Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 2000.00, "DESENVOLVEDOR");        
+        assertEquals(1800.00, calcSalario.calculaSalario(func), 1);
     }
     
     @Test
     public void testDBA() {
         CalculadoraDeSalarios calcSalario = new CalculadoraDeSalarios();  
-        Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 3000.00, "DBA");
-        double salCalculado = calcSalario.calculaSalario(func); 
-        assertEquals(2250.00, salCalculado, 1);
+        Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 3000.00, "DBA");        
+        assertEquals(2250.00, calcSalario.calculaSalario(func), 1);
     }
     
  
     @Test
     public void testTestador() {
         CalculadoraDeSalarios calcSalario = new CalculadoraDeSalarios();  
-        Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 1500.00, "TESTADOR");             
-       double salCalculado = calcSalario.calculaSalario(func);
-        assertEquals(1275.00, salCalculado, 1);
+        Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 1500.00, "TESTADOR");                    
+        assertEquals(1275.00, calcSalario.calculaSalario(func), 1);
     }
     
     @Test
     public void testGerente() {
         CalculadoraDeSalarios calcSalario = new CalculadoraDeSalarios();  
         Funcionario func = new Funcionario("Tamiris", "tamirismalacrida@gmail.com", 10500.00, "GERENTE");
-        double salCalculado = calcSalario.calculaSalario(func); 
-        assertEquals(7350.00, salCalculado, 1);
+        assertEquals(7350.00, calcSalario.calculaSalario(func), 1);
     }
         
 }
